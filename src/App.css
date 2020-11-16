@@ -1,4 +1,11 @@
 body {
+    background-color: black;
+    color: white;
     font-family: 'Sedgwick Ave Display', cursive;
     padding: 20px 60px;
+}
+
+a {
+    text-decoration: none;
+    color: white;
 }
