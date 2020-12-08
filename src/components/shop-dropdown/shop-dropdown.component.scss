@@ -1,0 +1,19 @@
+.shop-dropdown{
+    position: fixed;
+    width: 240px;
+    height: 340px;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    border: 1px solid white;
+    background-color: black;
+    top: 90px;
+    right: 305px;
+    z-index: 5;
+
+    .shop-options {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+      }
+}
