@@ -51,7 +51,6 @@ export const CustomButtonContainer = styled.button`
     background-color: black;
     color: white;
     text-transform: uppercase;
-    font-family: 'Sedgwick Ave Display', cursive;
     font-weight: bolder;
     border: none;
     cursor: pointer;
