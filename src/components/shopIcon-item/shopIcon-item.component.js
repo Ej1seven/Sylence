@@ -1,14 +1,14 @@
 import React from 'react';
 import { withRouter } from 'react-router-dom';
 
-import './shopIcon-item.styles.scss'
+import { ShopItem } from './shopIcon-item.styles.js'
 
 const ShopIconItem = ({ title, history, linkUrl, match }) => (
-    <div className='shop-item' onClick={() => history.push(`${match.url}${linkUrl}`)}>
-        <div classname='shop-details'>         
+    <ShopItem onClick={() => history.push(`${match.url}${linkUrl}`)}>
+        <div className='shop-details'>         
                         {title.toUpperCase()}          
         </div>
-    </div>
+    </ShopItem>
 )
 
 export default withRouter(ShopIconItem);

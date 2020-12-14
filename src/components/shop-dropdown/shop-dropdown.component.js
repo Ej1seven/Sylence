@@ -1,6 +1,6 @@
 import React from 'react';
 
-import './shop-dropdown.component.scss'
+import { ShopDropdownContainer } from './shop-dropdown.styles';
 
 import { connect } from 'react-redux';
 import { createStructuredSelector } from 'reselect';
@@ -11,15 +11,13 @@ import { toggleShopIconHidden } from '../../redux/shopIcon/shopIcon.actions';
 
 
 const ShopDropdown = ({ sections, toggleShopIconHidden }) => (
-    <div className='shop-dropdown' onMouseLeave={toggleShopIconHidden} onClick={toggleShopIconHidden}> 
-        <div className='shop-options'>
+    <ShopDropdownContainer onMouseLeave={toggleShopIconHidden} onClick={toggleShopIconHidden}> 
         {
             sections.map(({id, ...otherSectionProps}) => (
                 <ShopIconItem key={id} {...otherSectionProps} />
             ))
         }
-        </div>
-    </div>
+    </ShopDropdownContainer>
 )
 
 const mapStateToProps = createStructuredSelector({

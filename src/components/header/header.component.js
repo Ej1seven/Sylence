@@ -1,5 +1,4 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 import { ReactComponent as Logo } from '../../assets/sylence-logo-white.svg';
 import { auth } from '../../firebase/firebase.utils';
 import CartIcon from '../cart-icon/cart-icon.component';
@@ -11,29 +10,28 @@ import { selectCurrentUser } from '../../redux/user/user.selector';
 import ShopIcon from '../shop-icon/shop-icon.component';
 import { selectShopIconHidden } from '../../redux/shopIcon/shopIcon.selector';
 import  ShopDropdown  from '../shop-dropdown/shop-dropdown.component';
+import { HeaderContainer, LogoContainer, OptionsContainer, OptionLink } from './header.styles';
 
-
-import './header.styles.scss';
 
 const Header = ({ currentUser, hiddenCartIcon, hiddenShopIcon }) => (
-    <div className='header'>
-        <Link className='logo-container' to="/">
+    <HeaderContainer>
+        <LogoContainer to="/">
             <Logo className='logo' />
-        </Link>
-        <div className='options'>
+        </LogoContainer>
+        <OptionsContainer>
             <ShopIcon />
-            <Link className='option' to='/shop'>COLLECTIONS</Link>
-            <Link className='option' to='/shop'>CONTACT</Link>
+            <OptionLink to='/shop'>COLLECTIONS</OptionLink>
+            <OptionLink to='/shop'>CONTACT</OptionLink>
             {currentUser ? (
-                <div className='option' onClick={() => auth.signOut()}>SIGN OUT</div>
+                <OptionLink as='div' onClick={() => auth.signOut()}>SIGN OUT</OptionLink>
             ) : (
-                <Link className='option' to='/signin'>SIGN IN</Link>
+                <OptionLink to='/signin'>SIGN IN</OptionLink>
             )}
             <CartIcon />
-        </div>
+        </OptionsContainer>
         { hiddenCartIcon ? null : <CartDropdown /> }
         { hiddenShopIcon ? null : <ShopDropdown /> }
-     </div>
+     </HeaderContainer>
 )
 
 const mapStateToProps = createStructuredSelector({

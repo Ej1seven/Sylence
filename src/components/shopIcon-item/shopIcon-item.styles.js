@@ -1,4 +1,6 @@
-.shop-item {
+import styled from 'styled-components';
+
+export const ShopItem = styled.div`
     width: 100%;
     display: flex;
     align-items: center;
@@ -6,11 +8,11 @@
     border-right: 1px solid white;
     cursor: pointer;
 
-&.shop-item:last-child {
+    &:last-child {
     border-right: none;
 }
 
-&.shop-item:hover {
+    &:hover {
     background-color: white;
     color: black;
 }
@@ -25,5 +27,17 @@
     padding: 10px 20px;
     font-size: 20px;
     text-align: center;
-  } 
-}
+
+    @media screen and (max-width: 1024px) {
+        padding: 10px 3px;
+    }
+
+    @media screen and (max-width: 768px) {
+        font-size: 15px;
+    }
+
+    @media screen and (max-width: 425px) {
+        font-size: 12px;
+        padding: 2px 1px;
+    }
+`;
