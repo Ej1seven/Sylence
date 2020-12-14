@@ -5,7 +5,7 @@ export const GlobalStyle = createGlobalStyle`
     body {
         background-color: black;
         color: white;
-        font-family: 'Sedgwick Ave Display', cursive;
+        font-family: 'Fira Sans', 'Mukta', sans-serif;
         padding: 20px 60px;
 
         @media screen and (max-width: 800px) {
