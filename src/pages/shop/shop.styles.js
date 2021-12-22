@@ -1,8 +1,7 @@
-import styled from 'styled-components';
+import styled from "styled-components";
 
 export const ShopPageContainer = styled.div`
-
-    @media screen and (max-width: 800px) {
-        padding-top: 100px;
-    }
+  @media screen and (max-width: 800px) {
+    padding-top: 100px;
+  }
 `;

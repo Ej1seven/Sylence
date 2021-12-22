@@ -7,11 +7,11 @@ $main-color: black;
   color: $main-color;
 }
 
-.group {
+.contact-group {
   position: relative;
-  margin: 45px 0;
+  // margin: 45px 0;
 
-  .form-input {
+  .contact-form-input {
     background: none;
     background-color: black;
     color: $sub-color;
@@ -49,14 +49,6 @@ $main-color: black;
 
     &.shrink {
       @include shrinkLabel();
-    }
-  }
-}
-@media screen and (max-width: 800px) {
-  .group {
-    margin: auto;
-    .form-input {
-      width: 75%;
     }
   }
 }
