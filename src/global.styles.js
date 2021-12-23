@@ -1,4 +1,4 @@
-import { createGlobalStyle } from 'styled-components';
+import { createGlobalStyle } from "styled-components";
 
 export const GlobalStyle = createGlobalStyle`
     
@@ -21,4 +21,19 @@ export const GlobalStyle = createGlobalStyle`
     * {
         box-sizing: border-box;
     }
-`
+    #load {
+  position: absolute;
+  top: 50%;
+  left: 42.5%;
+  margin: auto;
+  @media screen and (max-width: 800px) {
+    left: 40.5%;
+        }
+  @media screen and (max-width: 500px) {
+    left: 31.5%;
+        }
+  @media screen and (max-width: 320px) {
+    left: 27.5%;
+        }
+}
+`;
